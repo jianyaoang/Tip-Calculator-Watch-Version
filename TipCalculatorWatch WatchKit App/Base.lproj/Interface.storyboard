@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TipCalculatorWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" alignment="left" text="Total Bill Amount:" textAlignment="center" id="Lj1-DH-fBQ"/>
+                        <label width="1" alignment="left" text="$0" textAlignment="center" id="RJV-BD-EDS"/>
+                        <slider width="1" alignment="left" continuous="YES" value="5" maximum="100" steps="20" id="EIA-ro-IIt">
+                            <connections>
+                                <action selector="sliderAmount:" destination="AgC-eL-Hgc" id="AAB-nl-Ghw"/>
+                            </connections>
+                        </slider>
+                        <separator alignment="left" id="r6h-Fz-WPk"/>
+                        <label width="1" alignment="left" text="Tip Amount:" textAlignment="center" id="zwc-Mz-2aG"/>
+                        <group width="1" alignment="left" id="bIr-H3-8qU">
+                            <items>
+                                <button width="47" alignment="left" title="10%" id="mIg-6E-cmJ">
+                                    <connections>
+                                        <action selector="onTenPercentButtonPressed" destination="AgC-eL-Hgc" id="L9J-du-oSw"/>
+                                    </connections>
+                                </button>
+                                <button width="45" alignment="left" title="15%" id="Cyo-md-zQI">
+                                    <connections>
+                                        <action selector="onFifteenPercentButtonPressed" destination="AgC-eL-Hgc" id="Cwm-Xd-X3X"/>
+                                    </connections>
+                                </button>
+                                <button width="45" alignment="left" title="20%" id="Q2i-ft-DOk">
+                                    <connections>
+                                        <action selector="onTwentyPrecentButtonPressed" destination="AgC-eL-Hgc" id="deB-KA-IXS"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="fifteenPercentButton" destination="Cyo-md-zQI" id="zhP-Yd-p5z"/>
+                        <outlet property="tenPercentButton" destination="mIg-6E-cmJ" id="Wxy-UH-lRZ"/>
+                        <outlet property="totalBillAmountLabel" destination="RJV-BD-EDS" id="aIE-JP-kzf"/>
+                        <outlet property="twentyButtonPressed" destination="Q2i-ft-DOk" id="ntN-Lb-vyW"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="245" y="303.75"/>
+        </scene>
+        <!--resultsController-->
+        <scene sceneID="0X1-j4-VMk">
+            <objects>
+                <controller identifier="resultsController" id="u6v-F6-Ug5" customClass="ResultsInterfaceController" customModule="TipCalculatorWatch_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Total Bill Amount:" textAlignment="left" id="ELJ-yi-fRh"/>
+                        <label width="136" alignment="left" text="Label" textAlignment="right" id="hjP-Ec-Jba"/>
+                        <label width="136" alignment="left" text="Tip Amount:" textAlignment="left" id="HCb-bB-iY2"/>
+                        <label width="136" alignment="left" text="Label" textAlignment="right" id="fMk-pr-7kM"/>
+                        <label width="136" alignment="left" text="Final Amount:" textAlignment="left" id="cAq-Ls-VhB"/>
+                        <label width="136" alignment="left" text="Label" textAlignment="right" id="RXg-Rs-OQc"/>
+                    </items>
+                    <connections>
+                        <outlet property="finalAmountLabel" destination="RXg-Rs-OQc" id="md6-qd-ugq"/>
+                        <outlet property="tipAmountLabel" destination="HCb-bB-iY2" id="Yfd-Jl-1vY"/>
+                        <outlet property="tipDollarLabel" destination="fMk-pr-7kM" id="nHx-2f-Jhb"/>
+                        <outlet property="totalBillAmount" destination="hjP-Ec-Jba" id="q3w-A1-Mq1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="437" y="301"/>
+        </scene>
+    </scenes>
+</document>
