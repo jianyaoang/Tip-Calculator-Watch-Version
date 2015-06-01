@@ -1,5 +1,5 @@
 # Tip-Calculator-Watch-Version
-Created a Tip Calculator Watch App <br>
+Tip Calculator Watch App <br>
 
 This Watch App project covers: <br>
 1. Usage of Interface Controller <br>
